@@ -1,0 +1,21 @@
+int potPin = A0;
+int potValue = 0;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(potPin,INPUT);
+
+  
+  Serial.println("Pot deger gosterimi basladi:");
+}
+
+void loop() {
+  analogRead(potPin);
+  potValue = analogRead(potPin);
+
+  Serial.print("Deger :");
+  
+  Serial.println(potValue);
+  delay(500);
+}
+ 
